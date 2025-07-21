@@ -8,7 +8,7 @@ def build()
 }
 def deployment(jobname,ipaddress,contextpath)
 {
-  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ipaddress}:/var/lib/tomcat10/webapps/${contextpath}"
+  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ipaddress}:/var/lib/tomcat10/webapps/${contextpath}.war"
 }
 def testing(jobname)
 {
